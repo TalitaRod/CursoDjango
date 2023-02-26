@@ -1,18 +1,17 @@
-{% include 'recipes/partials/head.html'  %} <!--inclui o arquivo da parte head, que vai aparecer em todas as páginas-->
+{% include 'recipes/partials/head.html' %} <!--inclui o arquivo da parte head, que vai aparecer em todas as páginas-->
 
 <body>
     {% include 'recipes/partials/header.html' %}
     {% include 'recipes/partials/search.html' %}
 
-    <main class = "main-content-container">
+    <main class="main-content-container">
         <div class="main-content main-content-list container">
-            <div class="recipe-list-item"></div>
-
+            {% include 'recipes/partials/recipes.html' %}
         </div>
-
-    
     </main>
 
-
+    {% include 'recipes/partials/footer.html' %}
 </body>
+
+
 </html>
