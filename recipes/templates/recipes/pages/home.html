@@ -1,17 +1,11 @@
-{% include 'recipes/partials/head.html' %} <!--inclui o arquivo da parte head, que vai aparecer em todas as páginas-->
+{% extends 'global/base.html' %} <!--Essa página home está herdando de global/base.html-->
 
-<body>
-    {% include 'recipes/partials/header.html' %}
-    {% include 'recipes/partials/search.html' %}
-
-    <main class="main-content-container">
-        <div class="main-content main-content-list container">
-            {% include 'recipes/partials/recipes.html' %}
-        </div>
-    </main>
-
-    {% include 'recipes/partials/footer.html' %}
-</body>
-
-
-</html>
+{% block content %}
+<div class="main-content main-content-list container">
+    {% include 'recipes/partials/recipes.html' %}
+    {% include 'recipes/partials/recipes.html' %}
+    {% include 'recipes/partials/recipes.html' %}
+    {% include 'recipes/partials/recipes.html' %}
+    {% include 'recipes/partials/recipes.html' %}
+</div>
+{% endblock content %}
